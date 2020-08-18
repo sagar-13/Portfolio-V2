@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0216c2ffccc3ed0a1d8dedb241880e1c",
+    "revision": "7c9c7819569b5d5968b8875d03807f97",
     "url": "/index.html"
   },
   {
-    "revision": "84f89b00eb0229f969e7",
+    "revision": "f3e676c3d052a830d14f",
     "url": "/static/css/2.eb43dee1.chunk.css"
   },
   {
-    "revision": "0fd677ba1c43d7fb636c",
+    "revision": "3b87dc9211db4be80d3c",
     "url": "/static/css/main.08b29332.chunk.css"
   },
   {
-    "revision": "84f89b00eb0229f969e7",
-    "url": "/static/js/2.412be359.chunk.js"
+    "revision": "f3e676c3d052a830d14f",
+    "url": "/static/js/2.f5146ce3.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.412be359.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.f5146ce3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fd677ba1c43d7fb636c",
-    "url": "/static/js/main.b5f04927.chunk.js"
+    "revision": "3b87dc9211db4be80d3c",
+    "url": "/static/js/main.d69437f7.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -44,20 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/iosButton.997304c9.png"
   },
   {
-    "revision": "eeee813b8e8e3df7cb2271cd26543cbb",
-    "url": "/static/media/jailbreakSite.eeee813b.gif"
-  },
-  {
     "revision": "cb24aae8e48b9a705fa555bf24ec7f1f",
     "url": "/static/media/ministry_education.cb24aae8.png"
   },
   {
     "revision": "649a172a8607e83724670328e56c7622",
     "url": "/static/media/mock.649a172a.gif"
-  },
-  {
-    "revision": "c4cb546aed8be0dcbdb59a5b1fe375e7",
-    "url": "/static/media/paint.c4cb546a.png"
   },
   {
     "revision": "c4cdd5e6dce2738713bc353cff1faa5a",
