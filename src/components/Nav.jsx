@@ -1,6 +1,8 @@
 import React from "react";
+
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -10,9 +12,8 @@ import Button from "@material-ui/core/Button";
 import EmailIcon from "@material-ui/icons/Email";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -26,7 +27,6 @@ function HideOnScroll(props) {
 }
 
 function NavLink(props) {
-
     return (
         <Link
             activeClass="nav-item-active"
@@ -70,30 +70,35 @@ export default function Nav() {
     const [drawer, openDrawer] = React.useState(false);
 
     const toggleDrawer = (open) => (event) => {
-        if (event.type === "keydown" &&
-            (event.key === "Tab" || event.key === "Shift")) {
+        if (
+            event.type === "keydown" &&
+            (event.key === "Tab" || event.key === "Shift")
+        ) {
             return;
         }
         openDrawer(open);
     };
 
-    const NavLinks = 
-        <> 
-        <NavLink to="project" text="Projects" className="nav-item"/>
-       
-        
-        <RouterLink to="/projects" className="nav-item archive"> <Typography variant="subtitle1">
-            Archive
-            </Typography></RouterLink>
-          
-        <NavLink to="work" text="Work" className="nav-item" />
-        <NavLink to="about" text="About" className="nav-item" />
-        <Button
-            className="nav-button"
-            href="mailto:sagar.suri@mail.utoronto.ca"
-        > <EmailIcon /> Contact
-        </Button>
-        </>;
+    const NavLinks = (
+        <>
+            <NavLink to="project" text="Projects" className="nav-item" />
+
+            <RouterLink to="/projects" className="nav-item archive">
+                {" "}
+                <Typography variant="subtitle1">Archive</Typography>
+            </RouterLink>
+
+            <NavLink to="work" text="Work" className="nav-item" />
+            <NavLink to="about" text="About" className="nav-item" />
+            <Button
+                className="nav-button"
+                href="mailto:sagar.suri@mail.utoronto.ca"
+            >
+                {" "}
+                <EmailIcon /> Contact
+            </Button>
+        </>
+    );
 
     return (
         <HideOnScroll>
@@ -104,25 +109,24 @@ export default function Nav() {
                         className="nav-title"
                         text={<SagarSuriLogo />}
                     />
-                    <Hidden xsDown>
-                        {NavLinks}
-                    </Hidden>
+                    <Hidden xsDown>{NavLinks}</Hidden>
                     <Hidden smUp>
                         <Button onClick={toggleDrawer(true)}>
-                            { <MenuIcon/> }</Button>
+                            {<MenuIcon />}
+                        </Button>
                     </Hidden>
 
                     <Drawer
-                    containerClassName="drawer"
+                        containerClassName="drawer"
                         anchor={"right"}
                         open={drawer}
                         onClose={toggleDrawer(false)}
-                        classes={{ paper: 'drawer' }}
-                       
+                        classes={{ paper: "drawer" }}
                     >
-                         <Button onClick={toggleDrawer(false)}>
-                            { <CloseIcon/> }</Button>
-                       { NavLinks}
+                        <Button onClick={toggleDrawer(false)}>
+                            {<CloseIcon />}
+                        </Button>
+                        {NavLinks}
                     </Drawer>
                 </Toolbar>
             </AppBar>

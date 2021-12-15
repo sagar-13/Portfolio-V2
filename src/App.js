@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Nav from "./components/Nav";
 import Top from "./components/Top";
@@ -14,34 +14,43 @@ import "aos/dist/aos.css";
 
 
 class App extends React.Component {
-  componentDidMount() {
-    AOS.init();
-  }
-  componentDidUpdate() {
-    AOS.refresh();
-  }
-  render() {
-    const main = (
-      <Grid id="app" container>
-        <Nav />
-        <Top />
-        <Project />
-        <Work />
-        <About />
-        <Footer />
-      </Grid>
-    );
-    return (
-      <Switch>
-        <Route exact path="/" render={() => main} />
-        <Route path="/projects" render={() => <>
-            <ProjectArchive />
-            <Footer />
-          </>
-      } />
-      </Switch>
-    );
-  }
+    componentDidMount() {
+        AOS.init();
+    }
+    componentDidUpdate() {
+        AOS.refresh();
+    }
+    render() {
+        const main = (
+            <Grid id="app" container>
+                <Nav/>
+                <Top/>
+                <Project/>
+                <Work/>
+                <About/>
+                <Footer/>
+            </Grid>
+        );
+        return (
+            <Switch>
+                <Route exact path="/"
+                    render={
+                        () => main
+                    }/>
+
+                <Route path="/projects"
+                    render={
+                        () => {
+                            return <>
+                                <ProjectArchive/>
+                                <Footer/>
+                            </>
+                    }
+                    }/>
+            </Switch>
+
+        );;
+    }
 }
 
 export default App;

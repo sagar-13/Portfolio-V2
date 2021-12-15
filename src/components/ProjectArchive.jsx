@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkIcon from "@material-ui/icons/Link";
+
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from "@material-ui/core/Hidden";
 class ProjectArchive extends React.Component {
     constructor(props) {
         super(props);
@@ -77,12 +77,12 @@ class ProjectArchive extends React.Component {
                     </Grid>
 
                     <Hidden mdUp>
-                    <Grid className="table-heading" item xs={4}>
-                        <Typography variant="h5">Name</Typography>
-                    </Grid>
-                    <Grid className="table-heading" item xs={8} >
-                        <Typography variant="h5">Description</Typography>
-                    </Grid>
+                        <Grid className="table-heading" item xs={4}>
+                            <Typography variant="h5">Name</Typography>
+                        </Grid>
+                        <Grid className="table-heading" item xs={8}>
+                            <Typography variant="h5">Description</Typography>
+                        </Grid>
                     </Hidden>
 
                     {items.map((item) => (
@@ -94,36 +94,32 @@ class ProjectArchive extends React.Component {
                             data-aos-duration="300"
                             className="table-row"
                             container
-                            item 
+                            item
                             xs={12}
                             md={5}
                             key={item.name}
                             spacing={2}
                             alignItems="flex-start"
-                            
                         >
                             <Grid className="table-cell-1" item xs={4} md={12}>
                                 <Typography variant="body1">
                                     {item.name}
                                 </Typography>
                                 <a href={item.html_url}>
-                                        <GitHubIcon />
+                                    <GitHubIcon />
+                                </a>
+                                {item.homepage && (
+                                    <a href={item.homepage}>
+                                        <LinkIcon />
                                     </a>
-                                    {item.homepage && (
-                                      <a href={item.homepage}>
-                                            <LinkIcon />
-                                      </a>
-                                    )}
+                                )}
                             </Grid>
                             <Grid className="table-cell-2" item xs={8} md={12}>
                                 <Grid item xs={12}>
                                     <Typography variant="subtitle1">
                                         {item.description}
                                     </Typography>
-                                  
                                 </Grid>
-
-                               
                             </Grid>
                         </Grid>
                     ))}

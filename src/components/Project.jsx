@@ -1,14 +1,14 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+
 import Video from "./../media/mock.gif";
 // import pcprtlststill from "./../media/pcprtlst.png";
 import SSJ from "./../media/SSJ.png";
 import pcprtlstfinal from "./../media/pcprtlstfinal.png";
-import jv1 from "./../media/jv1.png";
-import jv2 from "./../media/jv2.png";
-import jv3 from "./../media/jv3.png";
-import jv4 from "./../media/jv4.png";
 // import pcprtlstmobile from "./../media/pcprtlstmobile.png";
 // import jailbreakSite from "./../media/jailbreakSite.gif";
 import androidButton from "./../media/androidButton.png";
@@ -17,8 +17,6 @@ import justVert from "./../media/logos/justVert.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Button from "@material-ui/core/Button";
 // import paint from "./../media/paint.png";
-
-import { Link } from "react-router-dom";
 
 export default function Project() {
     return (
